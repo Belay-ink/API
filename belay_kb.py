@@ -77,7 +77,7 @@ final_payload = payload.replace("<REPLACED_TEXT>", html_string_for_post)
 
 print(final_payload)
 
- #post the url with the final payload by using KB cridetials 
+ #post the url using KB cridetials to servicenow page
 response = requests.post(url_test, data=final_payload.encode('utf-8'), headers={'Content-Type': 'application/json'}, auth=HTTPBasicAuth(sys.argv[3], sys.argv[4]))
 
  
