@@ -64,7 +64,7 @@ def main():
 
 
 #Automation 
-  html_string_for_post = latest_build_console_text.text.replace("\n", "<br/>").replace("�","<br/>").replace('"',"'")
+  html_string_for_post = latest_build_console_text.text.replace("\n", "<br/>").replace("�","<br/>")
 
  
 # print(html_string_for_post)
