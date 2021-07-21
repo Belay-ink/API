@@ -44,7 +44,7 @@ def main():
     final_payload = payload.replace("<REPLACED_TEXT>", html_string_for_post)
     print(final_payload)
     #ADM Credentials  
-    response = requests.post(url_test, data=final_payload.encode('utf-8'), headers={'Content-Type': 'application/json'}, auth=HTTPBasicAuth(sys.argv[3], sys.argv[4]))
+    response = requests.post(url_test, data=final_payload.encode('utf-8'), headers={'Content-Type': 'application/json'}, auth=HTTPBasicAuth(sys.argv[1], sys.argv[2]))
     print(response)
 
 if __name__ == "__main__":
