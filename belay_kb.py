@@ -26,13 +26,13 @@ url_prod = "https://surf.service-now.com/api/now/table/kb_knowledge"
 def main():
     #knowladge Api Credentials 
     base_url = "https://uswpldevops01.corp.service-now.com:8443"
-    latest_build_number = requests.get(base_url + "/job/osimage-management-centos/lastSuccessfulBuild/buildNumber", auth = HTTPBasicAuth(sys.argv[5], sys.argv[6]))
+    latest_build_number = requests.get(base_url + "/job/osimage-management-centos/lastSuccessfulBuild/buildNumber"))
     # print("response from latest build number: ", latest_build_number.text)
     
     console_text_url = base_url + "/job/osimage-management-centos/" + latest_build_number.text + "/consoleText"
     # print(console_text_url)
     
-    latest_build_console_text = requests.get(console_text_url, auth = HTTPBasicAuth(sys.argv[5], sys.argv[6]))
+    latest_build_console_text = requests.get(console_text_url)
     # print("response from latest console text: ", latest_build_console_text.text)
     
     
