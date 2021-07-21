@@ -23,6 +23,9 @@ print(payload)
 url_test = "https://surfsedev.service-now.com/api/now/table/kb_knowledge"
 url_prod = "https://surf.service-now.com/api/now/table/kb_knowledge"
 
+JOB_PATH = "/tmp/opt/jenkins/"
+NEW_FILES = os.listdir(JOB_PATH)
+
 def main():
     #knowladge Api Credentials 
     base_url = "https://uswpldevops01.corp.service-now.com:8443"
